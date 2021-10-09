@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main(void) {
+   int size;
+   int ub=6;
+   int lb=1;
+   size=ub-lb+1;
+   int N=4;
+   int J;
+   int K=3;
+   int arr[size];
+   
+   for(int i=1;i<=N;i++)
+   {
+   	scanf("%d",&arr[i]);
+   	
+   }
+   int item=arr[K];
+   
+   for(J=K;J<=N-1;J++)
+   {
+   	arr[J]=arr[J+1];
+   }
+   N=N-1;
+   for(int i=1;i<=N;i++)
+   {
+   	printf("%d",arr[i]);
+   }
+	return 0;
+}
+
