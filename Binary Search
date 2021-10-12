@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main(void) {
+	int size;
+	int ub=5; 
+	int lb=0;
+	size=ub-lb+1;
+	int N=6;
+	int arr[size];
+	for(int i=0;i<N;i++)
+	{
+		scanf("%d",&arr[i]);
+	}
+	int Beg=lb;
+	int End=ub;
+	int Mid=(Beg+End)/2;
+	int Item;
+	scanf("%d",&Item);
+	int LOC;
+	while(Beg<=End && arr[Mid]!=Item)
+	{
+		if(Item<arr[Mid])
+		{
+			End=Mid-1;
+		}
+		else
+		{
+			Beg=Mid+1;
+		}
+		Mid=Beg+End/2;
+		
+	}
+	if(arr[Mid]== Item)
+	{
+		LOC=Mid;
+	
+	printf("%d is present in an array",Item);
+	}
+	else
+	{
+		LOC=0;
+	
+	printf("%d is not present in array",Item);
+	}
+	return 0;
+}
