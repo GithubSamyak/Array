@@ -1,0 +1,45 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+    #include <stdio.h>
+
+int main(void) {
+	int size;
+	int ub=5;
+	int lb=0;
+	size=ub-lb+1;
+    int N=6;
+	int arr[size];
+	for(int i=0;i<N;i++)
+	{
+	    printf("Enter the value at location %d",i);
+		scanf("%d",&arr[i]);
+		
+	}
+	int  item;
+	{
+	  scanf("%d",&item);
+	}
+	int LOC=-1;
+	for(int i=0;i<N;i++)
+	{
+		if(arr[i]==item)
+		{
+			LOC=i;
+			printf("Value is found in an array %d",LOC);
+		}
+		
+	}
+	
+	if(LOC==-1)
+	{
+		printf("Value is not found in An Array %d",LOC);
+	}
+	return 0;
+}
+
